@@ -1,0 +1,88 @@
+:root {
+  --primary-color: #151a2d;
+  --page-color: #cfcccc;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--page-color);
+}
+
+.navbar {
+  width: 250px;
+  background-color: var(--primary-color);
+  height: 100vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0;
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.menu li {
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  list-style-type: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu > li {
+  border-radius: 10px; 
+}
+
+.menu > li:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.menu li ul {
+  display: none;
+  padding-left: 0;
+  position: absolute;
+  top: 0; 
+  left: 100%; 
+  z-index: 1000; 
+}
+
+.menu li:hover > ul {
+  display: block;
+}
+
+.menu li ul li {
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.menu li ul li:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 0; 
+}
+
+.menu li > div {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  justify-content: center;
+}
+
+.menu > li > div {
+  padding: 7px 0;
+  border-radius: 10px;
+}
